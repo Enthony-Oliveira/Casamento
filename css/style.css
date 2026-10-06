@@ -1,0 +1,541 @@
+.hero-section {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.box-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 15px;
+}
+
+.box-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c19a6b;
+  border-radius: 8px;
+  min-width: 90px;
+  padding: 15px 10px;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box-numeric {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.box-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- CERIMÔNIA (IGREJA) --- */
+.igreja-section {
+  padding: 0;
+  background-color: #f5f6f7;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.igreja-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+.igreja-image {
+  flex: 0 0 55%;
+  width: 55%;
+  display: flex;
+}
+
+.igreja-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  object-fit: cover;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.igreja-info {
+  flex: 1;
+  text-align: left;
+  color: #000000;
+  padding: 80px 5% 80px 0;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.igreja-info h2 {
+  font-size: 3rem;
+  color: #c19a6b;
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.igreja-desc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.igreja-details {
+  text-align: left;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 40px;
+  line-height: 2.2;
+  font-size: 1.05rem;
+  color: #000000;
+}
+
+.igreja-details p {
+  margin: 6px 0;
+}
+
+.igreja-details strong {
+  color: #000000;
+}
+
+/* --- BOTÃO GLOBAL --- */
+.btn-map {
+  align-self: flex-start;
+  display: inline-block;
+  background-color: #c19a6b;
+  color: #ffffff;
+  padding: 16px 42px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(193, 154, 107, 0.3);
+}
+
+.btn-map:hover {
+  background-color: #a37c52;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(163, 124, 82, 0.4);
+}
+
+/* --- RECEPÇÃO (FESTA) --- */
+.festa-section {
+  padding: 0;
+  background-color: #f5f6f7;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.festa-container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.festa-info {
+  flex: 1;
+  text-align: left;
+  color: #000000;
+  padding: 80px 0 80px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.festa-info h2 {
+  font-size: 3rem;
+  color: #c19a6b;
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.festa-desc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.festa-details {
+  text-align: left;
+  margin-bottom: 40px;
+  line-height: 2.2;
+  font-size: 1.05rem;
+  color: #000000;
+}
+
+.festa-details p {
+  margin: 6px 0;
+}
+
+.festa-details strong {
+  color: #000000;
+}
+
+.festa-image {
+  flex: 0 0 55%;
+  width: 55%;
+  display: flex;
+}
+
+.festa-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+  box-shadow: -10px 15px 35px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* =========================================
+   SEÇÃO DOS NOIVOS
+========================================= */
+.noivos-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.noivos-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.noivos-container h2 {
+  font-size: 3rem;
+  color: #c19a6b;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.noivos-fotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.perfil img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid #c19a6b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.perfil h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 0;
+  font-weight: 600;
+}
+
+.coracao {
+  font-size: 2.5rem;
+  color: #c19a6b;
+  margin-top: -30px;
+}
+
+.noivos-historia {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0;
+  font-style: italic;
+}
+
+/* =========================================
+   BOTÕES FLUTUANTES (PRESENTES E PIX)
+========================================= */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.btn-floating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.btn-floating:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-havan {
+  background-color: #c19a6b;
+}
+
+.btn-havan:hover {
+  background-color: #a37c52;
+}
+
+.btn-pix {
+  background-color: #32bcad;
+}
+
+.btn-pix:hover {
+  background-color: #279b8f;
+}
+
+/* =========================================
+   MODAL DO PIX E QR CODE
+========================================= */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #c19a6b;
+}
+
+.modal-content h2 {
+  color: #c19a6b;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+/* --- ESTILOS DO QR CODE --- */
+.pix-qrcode-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pix-qrcode {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid #c19a6b;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.pix-key-label {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.pix-key-box {
+  background-color: #f5f6f7;
+  border: 2px dashed #c19a6b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.btn-copy {
+  background-color: #32bcad;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+.btn-copy:hover {
+  background-color: #279b8f;
+}
+
+.copy-success-msg {
+  display: none;
+  color: #279b8f;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE / CELULARES)
+========================================= */
+@media (max-width: 900px) {
+  .hero-section {
+    height: 70dvh;
+  }
+
+  .box-time {
+    flex-wrap: wrap;
+    padding: 30px 15px;
+  }
+
+  .box-date {
+    min-width: 80px;
+    padding: 10px;
+  }
+
+  .igreja-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .festa-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .igreja-image,
+  .festa-image {
+    width: 100%;
+    flex: none;
+  }
+
+  .igreja-image img,
+  .festa-image img {
+    min-height: 350px;
+    border-radius: 0;
+  }
+
+  .igreja-info,
+  .festa-info {
+    padding: 20px 5% 60px 5%;
+    max-width: 100%;
+  }
+
+  .igreja-info h2,
+  .festa-info h2 {
+    font-size: 2.5rem;
+  }
+
+  .noivos-fotos {
+    gap: 15px;
+  }
+
+  .perfil img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .coracao {
+    font-size: 1.8rem;
+    margin-top: -20px;
+  }
+
+  .floating-buttons {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .btn-floating {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+}
