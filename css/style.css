@@ -507,6 +507,40 @@
 }
 
 /* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+.footer {
+  background-color: #f5f6f7;
+  color: #a0a0a0;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border-top: 1px solid rgba(193, 154, 107, 0.2);
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer-dev {
+  font-size: 0.8rem;
+  color: #888888;
+}
+
+.footer-dev a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-dev a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* =========================================
    RESPONSIVIDADE (MOBILE / CELULARES)
 ========================================= */
 @media (max-width: 900px) {
