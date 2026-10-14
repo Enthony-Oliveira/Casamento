@@ -1,3 +1,25 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   HERO
+========================================= */
 .hero-section {
   width: 100%;
   min-height: 100dvh;
@@ -34,21 +56,21 @@
 .hero-text p {
   font-size: 1.5rem;
   line-height: 1.8;
-  color: #333333;
+  color: var(--text-soft);
   font-style: italic;
   margin-bottom: 20px;
   max-width: 500px;
 }
 
 .hero-text span {
-  font-size: 0.7rem;
+  font-size: 0.85rem; /* antes 0.7rem (11px, pequeno demais) */
   font-weight: 600;
-  color: #000000;
+  color: var(--text);
   letter-spacing: 1px;
 }
 
 /* =========================================
-   BOX TIME (CONTAGEM REGRESSIVA)
+   CONTAGEM REGRESSIVA
 ========================================= */
 .box-time {
   display: flex;
@@ -62,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #c19a6b;
+  background-color: var(--gold-strong);
   border-radius: 8px;
   min-width: 90px;
   padding: 15px 10px;
@@ -74,6 +96,7 @@
   font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
+  font-variant-numeric: tabular-nums; /* dígitos com mesma largura: o número não "treme" */
 }
 
 .box-text {
@@ -85,11 +108,54 @@
 }
 
 /* =========================================
+   TÍTULOS E TEXTOS COMPARTILHADOS
+========================================= */
+.igreja-info h2,
+.festa-info h2,
+.noivos-container h2 {
+  font-size: 3rem;
+  color: var(--gold-strong);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.igreja-info h2,
+.festa-info h2 {
+  margin-bottom: 24px;
+}
+
+.noivos-container h2 {
+  margin: 0;
+}
+
+.igreja-desc,
+.festa-desc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.igreja-details,
+.festa-details {
+  text-align: left;
+  margin-bottom: 40px;
+  line-height: 2.2;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.igreja-details p,
+.festa-details p {
+  margin: 6px 0;
+}
+
+/* =========================================
    CERIMÔNIA (IGREJA)
 ========================================= */
 .igreja-section {
   padding: 0;
-  background-color: #f5f6f7;
+  background-color: var(--bg-soft);
   width: 100%;
   overflow-x: hidden;
 }
@@ -124,7 +190,7 @@
 .igreja-info {
   flex: 1;
   text-align: left;
-  color: #000000;
+  color: var(--text);
   padding: 80px 5% 80px 0;
   max-width: 580px;
   display: flex;
@@ -133,46 +199,13 @@
   align-items: flex-start;
 }
 
-.igreja-info h2 {
-  font-size: 3rem;
-  color: #c19a6b;
-  margin-bottom: 24px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.igreja-desc {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: #000000;
-}
-
-.igreja-details {
-  text-align: left;
-  background-color: transparent;
-  padding: 0;
-  margin-bottom: 40px;
-  line-height: 2.2;
-  font-size: 1.05rem;
-  color: #000000;
-}
-
-.igreja-details p {
-  margin: 6px 0;
-}
-
-.igreja-details strong {
-  color: #000000;
-}
-
 /* =========================================
-   BOTÃO GLOBAL
+   BOTÃO DE MAPA
 ========================================= */
 .btn-map {
   align-self: flex-start;
   display: inline-block;
-  background-color: #c19a6b;
+  background-color: var(--gold-strong);
   color: #ffffff;
   padding: 16px 42px;
   border-radius: 30px;
@@ -181,14 +214,17 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(193, 154, 107, 0.3);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(138, 98, 52, 0.3);
 }
 
 .btn-map:hover {
-  background-color: #a37c52;
+  background-color: var(--gold-strong-hover);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(163, 124, 82, 0.4);
+  box-shadow: 0 6px 20px rgba(111, 78, 39, 0.4);
 }
 
 /* =========================================
@@ -196,7 +232,7 @@
 ========================================= */
 .festa-section {
   padding: 0;
-  background-color: #f5f6f7;
+  background-color: var(--bg-soft);
   width: 100%;
   overflow-x: hidden;
 }
@@ -214,43 +250,12 @@
 .festa-info {
   flex: 1;
   text-align: left;
-  color: #000000;
+  color: var(--text);
   padding: 80px 0 80px 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
-
-.festa-info h2 {
-  font-size: 3rem;
-  color: #c19a6b;
-  margin-bottom: 24px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-.festa-desc {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: #000000;
-}
-
-.festa-details {
-  text-align: left;
-  margin-bottom: 40px;
-  line-height: 2.2;
-  font-size: 1.05rem;
-  color: #000000;
-}
-
-.festa-details p {
-  margin: 6px 0;
-}
-
-.festa-details strong {
-  color: #000000;
 }
 
 .festa-image {
@@ -270,7 +275,7 @@
 }
 
 /* =========================================
-   SEÇÃO DOS NOIVOS
+   NOIVOS
 ========================================= */
 .noivos-section {
   background-color: #ffffff;
@@ -286,14 +291,6 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-}
-
-.noivos-container h2 {
-  font-size: 3rem;
-  color: #c19a6b;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin: 0;
 }
 
 .noivos-fotos {
@@ -316,33 +313,33 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 4px solid #c19a6b;
+  border: 4px solid var(--gold);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .perfil h3 {
   font-size: 1.5rem;
-  color: #000000;
+  color: var(--text);
   margin: 0;
   font-weight: 600;
 }
 
 .coracao {
   font-size: 2.5rem;
-  color: #c19a6b;
+  color: var(--gold);
   margin-top: -30px;
 }
 
 .noivos-historia {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #333333;
+  color: var(--text-soft);
   margin: 0;
   font-style: italic;
 }
 
 /* =========================================
-   BOTÕES FLUTUANTES (PRESENTES E PIX)
+   BOTÕES FLUTUANTES
 ========================================= */
 .floating-buttons {
   position: fixed;
@@ -365,11 +362,33 @@
   font-size: 0.95rem;
   color: #ffffff;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   white-space: nowrap;
   border: none;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font);
+  gap: 10px; /* espaço entre o ícone e o texto */
+}
+
+/* Logos dentro de uma plaquinha branca: aparecem nas cores originais */
+.btn-logo {
+  box-sizing: border-box;
+  height: 30px;
+  width: auto;
+  padding: 5px 8px;
+  background: #ffffff;
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0; /* a logo nunca encolhe quando o texto aperta */
+}
+
+.btn-logo-round {
+  width: 30px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .btn-floating:hover {
@@ -386,23 +405,20 @@
 }
 
 .btn-pix {
-  background-color: #22c25f;
+  background-color: #12803f; /* antes #22c25f (contraste 2.3:1 com branco) */
 }
 
 .btn-pix:hover {
-  background-color: #20e96d;
+  background-color: #0d6a33; /* antes #20e96d (ficava ainda pior no hover) */
 }
 
 /* =========================================
-   MODAL DO PIX E QR CODE
+   MODAL DO PIX
 ========================================= */
 .modal-overlay {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2000;
   align-items: center;
@@ -424,23 +440,34 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Agora é <button>: área de toque de 44x44 e reset do visual padrão */
 .close-modal {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-family: inherit;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #333333;
+  line-height: 1;
+  color: var(--text-soft);
   cursor: pointer;
   transition: color 0.2s;
 }
 
 .close-modal:hover {
-  color: #c19a6b;
+  color: var(--gold-strong);
 }
 
 .modal-content h2 {
-  color: #c19a6b;
+  color: var(--gold-strong);
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 2rem;
@@ -456,7 +483,7 @@
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border: 3px solid #c19a6b;
+  border: 3px solid var(--gold);
   border-radius: 12px;
   padding: 5px;
   background-color: #ffffff;
@@ -466,23 +493,25 @@
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 5px;
-  color: #333333;
+  color: var(--text-soft);
 }
 
 .pix-key-box {
-  background-color: #f5f6f7;
-  border: 2px dashed #c19a6b;
+  background-color: var(--bg-soft);
+  border: 2px dashed var(--gold);
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
   font-size: 1.1rem;
   font-weight: 600;
   word-break: break-all;
+  -webkit-user-select: all;
+  user-select: all; /* um toque seleciona a chave inteira (plano B para copiar) */
 }
 
 .btn-copy {
-  background-color: #32bcad;
-  color: white;
+  background-color: #1b7f74; /* antes #32bcad (contraste 2.3:1 com branco) */
+  color: #ffffff;
   border: none;
   padding: 14px 24px;
   border-radius: 30px;
@@ -491,27 +520,27 @@
   cursor: pointer;
   transition: background-color 0.3s;
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font);
 }
 
 .btn-copy:hover {
-  background-color: #279b8f;
+  background-color: #156b62;
 }
 
 .copy-success-msg {
-  display: none;
-  color: #279b8f;
+  min-height: 1.4em; /* reserva o espaço: a mensagem aparece sem empurrar o layout */
+  color: #156b62;
   font-size: 0.9rem;
   margin-top: 15px;
   font-weight: 600;
 }
 
 /* =========================================
-   RODAPÉ (FOOTER)
+   RODAPÉ
 ========================================= */
 .footer {
-  background-color: #f5f6f7;
-  color: #a0a0a0;
+  background-color: var(--bg-soft);
+  color: var(--text-muted);
   text-align: center;
   padding: 30px 20px;
   font-size: 0.85rem;
@@ -525,23 +554,36 @@
 
 .footer-dev {
   font-size: 0.8rem;
-  color: #888888;
+  color: var(--text-muted);
 }
 
 .footer-dev a {
-  color: #000000;
-  text-decoration: none;
+  color: var(--text);
+  text-decoration: underline; /* links precisam ser distinguíveis sem depender de cor */
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .footer-dev a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+  color: var(--gold-strong); /* antes #fff: o link sumia no fundo claro */
 }
 
 /* =========================================
-   RESPONSIVIDADE (MOBILE / CELULARES)
+   MOVIMENTO REDUZIDO
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn-map:hover,
+  .btn-floating:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   RESPONSIVO
 ========================================= */
 @media (max-width: 900px) {
   .hero-section {
@@ -634,5 +676,21 @@
   .btn-floating {
     padding: 12px 18px;
     font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .btn-logo {
+    height: 26px;
+    padding: 4px 6px;
+  }
+
+  .btn-logo-round {
+    width: 26px;
+    padding: 4px;
+  }
+
+  /* Espaço para os botões flutuantes não cobrirem o texto do rodapé */
+  .footer {
+    padding-bottom: 130px;
   }
 }
