@@ -84,14 +84,6 @@ button:focus-visible {
   letter-spacing: 1px;
 }
 
-/* Convite logo abaixo da citação */
-.hero-desc {
-  margin-top: 32px;
-  max-width: 500px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text);
-}
 
 /* =========================================
    CONTAGEM REGRESSIVA
@@ -129,6 +121,22 @@ button:focus-visible {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* =========================================
+   FRASE DE CONVITE (abaixo da contagem)
+========================================= */
+.convite-section {
+  padding: 0 20px 56px;
+  text-align: center;
+}
+
+.convite {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text);
 }
 
 /* =========================================
@@ -617,8 +625,11 @@ button:focus-visible {
     font-size: 1.2rem;
   }
 
-  .hero-desc {
-    margin-top: 24px;
+  .convite-section {
+    padding: 0 20px 40px;
+  }
+
+  .convite {
     font-size: 1.05rem;
   }
 
