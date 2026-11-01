@@ -584,6 +584,30 @@ button:focus-visible {
 }
 
 /* =========================================
+   ANIMAÇÃO AO ROLAR
+   (só opacity e transform: leves e sem "pular" o layout)
+========================================= */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js [data-reveal="left"] {
+  transform: translateX(-40px);
+}
+
+.js [data-reveal="right"] {
+  transform: translateX(40px);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* =========================================
    MOVIMENTO REDUZIDO
 ========================================= */
 @media (prefers-reduced-motion: reduce) {
@@ -593,6 +617,12 @@ button:focus-visible {
 
   .btn-map:hover,
   .btn-floating:hover {
+    transform: none;
+  }
+
+  /* Quem pediu menos movimento vê tudo já no lugar, sem animação */
+  .js [data-reveal] {
+    opacity: 1;
     transform: none;
   }
 }

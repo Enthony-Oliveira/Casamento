@@ -10,6 +10,11 @@
     />
     <meta name="theme-color" content="#8a6234" />
 
+    <!-- Marca que o JavaScript está ativo: só assim as animações de rolagem escondem elementos -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
     <!-- Pré-visualização do link (WhatsApp, Instagram etc.).
          Para aparecer uma foto, adicione também: og:image com a URL completa de uma imagem 1200x630 (JPG, até 300 KB) -->
     <meta property="og:type" content="website" />
@@ -88,26 +93,26 @@
         class="box-time"
         aria-label="Contagem regressiva para o casamento"
       >
-        <div class="box-date">
+        <div class="box-date" data-reveal style="--reveal-delay: 0ms">
           <span class="box-numeric">00</span>
           <p class="box-text">Dias</p>
         </div>
-        <div class="box-date">
+        <div class="box-date" data-reveal style="--reveal-delay: 100ms">
           <span class="box-numeric">00</span>
           <p class="box-text">Horas</p>
         </div>
-        <div class="box-date">
+        <div class="box-date" data-reveal style="--reveal-delay: 200ms">
           <span class="box-numeric">00</span>
           <p class="box-text">Minutos</p>
         </div>
-        <div class="box-date">
+        <div class="box-date" data-reveal style="--reveal-delay: 300ms">
           <span class="box-numeric">00</span>
           <p class="box-text">Segundos</p>
         </div>
       </section>
 
       <section class="convite-section">
-        <p class="convite">
+        <p class="convite" data-reveal>
           É com muita alegria que convidamos você para celebrar o nosso amor e
           testemunhar a nossa união perante Deus e nossas famílias.
         </p>
@@ -115,9 +120,9 @@
 
       <section class="noivos-section">
         <div class="noivos-container">
-          <h2>Os Noivos</h2>
+          <h2 data-reveal>Os Noivos</h2>
 
-          <div class="noivos-fotos">
+          <div class="noivos-fotos" data-reveal>
             <div class="perfil">
               <img
                 src="image/enthony.webp"
@@ -145,7 +150,7 @@
             </div>
           </div>
 
-          <p class="noivos-historia">
+          <p class="noivos-historia" data-reveal>
             "Nossa história começou de forma simples, nos corredores da escola,
             e desde então seguimos construindo lindas memórias. Após sete anos
             de um namoro repleto de cumplicidade, sonhos, risos e da alegria de
@@ -157,7 +162,7 @@
 
       <section class="igreja-section">
         <div class="igreja-container">
-          <div class="igreja-image">
+          <div class="igreja-image" data-reveal="left">
             <img
               src="image/igreja.webp"
               alt="Fachada da Paróquia Santa Terezinha do Menino Jesus"
@@ -167,7 +172,7 @@
               decoding="async"
             />
           </div>
-          <div class="igreja-info">
+          <div class="igreja-info" data-reveal="right">
             <h2>A Cerimônia</h2>
 
             <div class="igreja-details">
@@ -195,7 +200,7 @@
 
       <section class="festa-section">
         <div class="festa-container">
-          <div class="festa-info">
+          <div class="festa-info" data-reveal="left">
             <h2>A Recepção</h2>
             <p class="festa-desc">
               Após a cerimônia, ficaremos muito felizes em receber você para
@@ -220,7 +225,7 @@
             </p>
           </div>
 
-          <div class="festa-image">
+          <div class="festa-image" data-reveal="right">
             <img
               src="image/salão-de-festa.webp"
               alt="Salão onde será realizada a festa do casamento"

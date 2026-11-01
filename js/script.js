@@ -2,6 +2,34 @@
   "use strict";
 
   // =========================================
+  // ANIMAÇÃO AO ROLAR
+  // =========================================
+  const itensAnimados = document.querySelectorAll("[data-reveal]");
+  const reduzirMovimento = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (itensAnimados.length) {
+    if (reduzirMovimento || !("IntersectionObserver" in window)) {
+      // Sem animação: mostra tudo de uma vez
+      itensAnimados.forEach((el) => el.classList.add("is-visible"));
+    } else {
+      const observador = new IntersectionObserver(
+        function (entradas, obs) {
+          entradas.forEach(function (entrada) {
+            if (entrada.isIntersecting) {
+              entrada.target.classList.add("is-visible");
+              obs.unobserve(entrada.target); // anima uma vez e para de observar
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
+      );
+      itensAnimados.forEach((el) => observador.observe(el));
+    }
+  }
+
+  // =========================================
   // CONFIGURAÇÃO
   // =========================================
   // Horário de Brasília (-03:00) fixo: todo convidado vê a mesma contagem,
